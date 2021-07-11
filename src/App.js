@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './sass/App.scss';
+
+import { ModalProvider } from './utils/modalStatus';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Login from './pages/Login';
+import Signup from './pages/Signup';
+import Home from './pages/Home';
+import Category from './pages/Category';
+import Categories from './pages/Categories';
+import Product from './pages/Product';
+import SellerProducts from './pages/SellerProducts';
+import SellerProductsUpload from './pages/SellerProductsUpload';
+import SellerProductsUpdate from './pages/SellerProductsUpdate';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+return(
+  <ModalProvider >
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/login" component={Login}></Route>
+        <Route exact path="/seller" component={SellerProducts}></Route>
+        <Route exact path="/categories" component={Categories}></Route>
+        <Route exact path="/categories/:cat" component={Category}></Route>
+        <Route exact path="/products/:id" component={Product}></Route>
+        <Route exact path="/signup" component={Signup}></Route>
+        <Route exact path="/upload" component={SellerProductsUpload}></Route>
+        <Route exact path="/update/:id" component={SellerProductsUpdate}></Route>
+      </Switch>
+  </BrowserRouter>
+  </ModalProvider>
+  )
 }
 
 export default App;

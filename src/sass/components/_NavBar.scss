@@ -1,0 +1,29 @@
+@import '../abstracts/variables';
+
+a {
+    text-decoration: none;
+}
+.nav {
+    padding:25px;
+    font-family: $lato;
+    display: flex;
+
+    &__brand{
+        display: flex;
+        list-style: none; 
+    }
+
+    &__links {
+        display: flex;
+        list-style: none;
+        margin-left: auto;
+    }
+
+    &__item{
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        padding: 0 1rem;
+        color: $secondary;
+    }
+}

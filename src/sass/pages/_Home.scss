@@ -1,0 +1,42 @@
+@import "../abstracts/variables";
+
+.home {
+    margin: auto;
+    max-width: 1440px;
+}
+
+.home-banner {
+    width: 96%;
+    max-width: 1440px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: $light-brown;
+    background-image: url('../../assets/img/home-banner-image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 1rem;
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+    p {
+        width: 100%;
+        color: white;
+        font-size: 2rem;
+        font-weight: medium;
+        padding: 2rem 5rem;
+        letter-spacing: 0.4rem;
+        span {
+            margin-left: 4rem;
+        }
+        @media (max-width: 768px){
+            padding: 13rem 4rem;
+            font-size: 1.3rem;
+            line-height: 2rem;
+            span {
+                margin-left: 0rem;
+            }
+        }
+    }
+    
+}

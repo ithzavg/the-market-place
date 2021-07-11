@@ -1,0 +1,28 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+
+.login{
+    
+    &__form{
+        @include form;
+        margin-top: 35px;
+        gap:12px;
+    }
+
+    &__password, &__signup{
+        font-family: $lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        color: $secondary;
+    }
+    
+}
+
+.login__externals{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
